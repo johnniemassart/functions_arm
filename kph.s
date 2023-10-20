@@ -9,29 +9,29 @@ main:
 	SUB sp, sp, #4
 	STR lr, [sp, #0]
 
-	#user miles prompt
+	#user hours prompt
 	LDR r0, =prompt1
 	BL printf
 
-	#scan user miles input
+	#scan user hours input
 	LDR r0, =formatHours
 	LDR r1, =hours
 	BL scanf
 
-	#store user miles input
+	#store user hours input
 	LDR r0, =hours
 	LDR r8, [r0]
 
-	#user hours prompt
+	#user miles prompt
 	LDR r0, =prompt2
 	BL printf
 
-	#scan user hours input
+	#scan user miles input
 	LDR r0, =formatMiles
 	LDR r1, =miles
 	BL scanf
 
-	#store user hours input
+	#store user miles input
 	LDR r0, =miles
 	LDR r4, [r0]
 
