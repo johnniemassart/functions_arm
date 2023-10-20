@@ -14,12 +14,12 @@ main:
 	BL printf
 
 	#scan user miles input
-	LDR r0, =formatMiles
-	LDR r1, =miles
+	LDR r0, =formatHours
+	LDR r1, =hours
 	BL scanf
 
 	#store user miles input
-	LDR r0, =miles
+	LDR r0, =hours
 	LDR r8, [r0]
 
 	#user hours prompt
@@ -27,12 +27,12 @@ main:
 	BL printf
 
 	#scan user hours input
-	LDR r0, =formatHours
-	LDR r1, =hours
+	LDR r0, =formatMiles
+	LDR r1, =miles
 	BL scanf
 
 	#store user hours input
-	LDR r0, =hours
+	LDR r0, =miles
 	LDR r4, [r0]
 
 	#call kph function
@@ -48,8 +48,8 @@ main:
 	ADD sp, sp, #4
 	MOV pc, lr
 .data
-	prompt1: .asciz "Enter miles: "
-	prompt2: .asciz "Enter hours: "
+	prompt1: .asciz "Enter hours: "
+	prompt2: .asciz "Enter miles: "
 	formatMiles: .asciz "%d"
 	formatHours: .asciz "%d"
 	miles: .word 0

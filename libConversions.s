@@ -15,7 +15,7 @@ m2k:
 
 	#m2k
 	MOV r1, #161
-	MUL r0, r8, r1
+	MUL r0, r4, r1
 	MOV r1, #100
 	BL __aeabi_idiv
 
@@ -35,7 +35,7 @@ kph:
 
 	#kph
 	BL m2k
-	MOV r1, r4
+	MOV r1, r8
 	BL __aeabi_idiv
 
 	#pop the stack
