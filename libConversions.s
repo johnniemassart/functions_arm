@@ -84,16 +84,10 @@ i2f:
 	MOV r4, r0
 
 	#2. inches conversion
-	#load total inches
-	#LDR r5, r9
-	#LDR r5, [r5, #0]
 	#feet conversion
 	MUL r6, r1, r4
-
 	#remaining inches
 	SUB r2, r9, r6
-	#total feet
-	#MOV r1, r4
 
 	#pop the stack
 	LDR lr, [sp, #0]
